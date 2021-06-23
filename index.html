@@ -24,72 +24,208 @@
     <header>
         <div class="col-md-9 ml-sm-auto col-lg-10 px-md-4 py-4 header-div">
             <img class="logo-img" src="presenta.png" style="height: 80px; width: auto;">
+            <nav class="navbar navbar-expand-lg navbar-light">        
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#player_view">Player</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#staff_view">Staff</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
         </div>
     </header>
       <div class="container-fluid">
         <div class="row main-row">
             <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4 py-4">
-                <div class="row my-4 player-head-row">
-                    <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0 player_day">
-                    </div>
-                    <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-8 player_day player-head">
-                        <div class="half-header">
-                            <h3 class="f-w-600">PlayerTrack</h3>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0 player_day">
-                    </div>
-                </div>
                 <div class="row my-4">
                     <div class="col-12 col-md-6 col-lg-2 mb-4 mb-lg-0 player_day">
                     </div>
                     <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-8 player_day">
                         <div class="card">
-                            <h5 class="card-header">Your Daily Well-Being Record</h5>
+                            <h1 class="card-header">PlayerTrack</h1>
                             <div class="card-body">
-                                <form action="/player/{{ user }}" method="POST" id="daily_input">
-                                    <label for="weight">Weight:</label>
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-append">
-                                            <span class="input-group-text"><i class="fas fa-weight-hanging"></i></span>
-                                        </div>
-                                        <input type="number" class="form-control" id="weight" name="weight" placeholder="kg" step="0.1" min="0" required>
-                                    </div>
-                                    <label for="energy">Energy:</label>
-                                    <div class="input-group mb-2">
-                                      <div class="input-group-append">
-                                        <span class="input-group-text"><i class="fas fa-bolt"></i></span>
-                                      </div>
-                                      <input type="range" id="energy" name="energy" min="1" max="5" value="3" step="0.5" class="slider form-control" required>
-                                      <p id="penergy">3</p>
-                                    </div>
-                                    <label for="energy">Sleep:</label>
-                                    <div class="input-group mb-2">
-                                      <div class="input-group-append">
-                                        <span class="input-group-text"><i class="fas fa-bed"></i></span>
-                                      </div>
-                                      <input type="range" id="sleep" name="sleep" min="1" max="5" value="3" step="0.5" class="slider form-control" required>
-                                      <p id="psleep">3</p>
-                                    </div>
-                                    <label for="energy">Pain:</label>
-                                    <div class="input-group mb-2">
-                                      <div class="input-group-append">
-                                        <span class="input-group-text"><i class="fas fa-medkit"></i></span>
-                                      </div>
-                                      <input type="range" id="pain" name="pain" min="1" max="5" value="3" step="0.5" class="slider form-control custom-range" required>
-                                      <p id="ppain">3</p>
-                                    </div>
-                                    <label for="description">Description:</label>
-                                    <div class="input-group mb-3">
-                                        <textarea id="description" name="description" form="daily_input"placeholder="Enter text here..." class="form-control"></textarea>
-                                    </div>
-                                    <input class="btn-style" type="submit" value="Submit">
-                                </form>
+                                <p>It is a daily use app for the different members of a team sport, both staff and players, in order to centralize all relevant player and team data with the ultimate objective to produce better results. This is possible thanks to a predictive model of injuries, post-injury analysis and performance measurements, based on the information provided daily by the players and the data produced by the GPS.</p>
                             </div>
                           </div>
                     </div>
                     <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-2 player_day">
                     </div>
+                </div>
+                <div class="row my-4">
+                  <div class="col-12 col-md-6 col-lg-1 mb-4 mb-lg-0 player_day">
+                  </div>
+                  <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-10 player_day">
+                      <div class="card">
+                          <h1 class="card-header">Login page</h1>
+                          <div class="card-body">
+                            <img src="placas/placas(1).png">
+                            <p>Login in page for both player and staff</p>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-1 player_day">
+                  </div>
+                </div>
+                <div class="row my-4">
+                  <div class="col-12 col-md-6 col-lg-1 mb-4 mb-lg-0 player_day">
+                  </div>
+                  <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-10 player_day">
+                      <div class="card">
+                          <h1 class="card-header" id="player_view">Player view</h1>
+                          <div class="card-body">
+                            <img src="placas/placas(7).png">
+                          </br>
+                            <p>When a player logs in they are directed to a personalized view where they can input their daily well-being stats. Weight, sleep, energy and pain levels and a pain description. This is later used by staff members to keep track of each individual players’ current state. The information is transferred within the app through jQuery scripts and is stored and queried from a MySQL database</p>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-1 player_day">
+                  </div>
+                </div>
+                <div class="row my-4">
+                  <div class="col-12 col-md-6 col-lg-1 mb-4 mb-lg-0 player_day">
+                  </div>
+                  <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-10 player_day">
+                      <div class="card">
+                          <h1 class="card-header" id="staff_view">Staff view</h1>
+                          <div class="card-body">
+                            <img src="placas/placas(2).png">
+                          </br>
+                            <p>When a staff member logs in, they are directed to a dashboard where they can access several player related functionalities. 
+                              The list in the middle shows which players have already submitted their daily form for today, in order to keep track and remind them to do so. This is automated by querying the player database and comparing the last entry with today’s date.
+                              </p>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-1 player_day">
+                  </div>
+                </div>
+                <div class="row my-4">
+                  <div class="col-12 col-md-6 col-lg-1 mb-4 mb-lg-0 player_day">
+                  </div>
+                  <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-10 player_day">
+                      <div class="card">
+                          <h1 class="card-header">Staff view - Player profile</h1>
+                          <div class="card-body">
+                            <img src="placas/placas(3).png">
+                            <br>
+                            <p>Next is a player profile (Luke) where all the GPS data from selected matches is displayed in a dynamic table created with jQuery’s plugin DataTable which allows for personalized filters and sorting to be carried out.</p>
+                            <p>The last part in the player profiles is the possibility to keep track of injuries. On the left, there is an injury table which shows past or current injuries. In the middle the staff can add a new or old injury and on the right column they can edit or delete them. All injuries are stored in an injury table within the MySQL database and when modifications are done, the table automatically updates.</p>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-1 player_day">
+                  </div>
+                </div>
+                <div class="row my-4">
+                  <div class="col-12 col-md-6 col-lg-1 mb-4 mb-lg-0 player_day">
+                  </div>
+                  <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-10 player_day">
+                      <div class="card">
+                          <h1 class="card-header">Staff view - Player profile with Advanced Stats</h1>
+                          <div class="card-body">
+                            <img src="placas/placas(4).png">
+                            <br>
+                            <p>By clicking on the Advanced Stats button, a list is displayed with performance variables we created based on the GPS variables. These variables were developed after an extensive data analysis and research done in Jupyter Notebook using for example the Pandas and MatPlotLib libraries for Python.</p>
+                            <p>Each is a button by itself that produces a dynamic chart created with Chart.js that shows the player performance, their average and two indexes. The upper index is a risk of injury limit which players should not cross. If they do so, they are in imminent risk of injury. The lower index is an underperformance indicator which players should remain above. </p>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-1 player_day">
+                  </div>
+                </div>
+                <div class="row my-4">
+                  <div class="col-12 col-md-6 col-lg-1 mb-4 mb-lg-0 player_day">
+                  </div>
+                  <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-10 player_day">
+                      <div class="card">
+                          <h1 class="card-header">Staff view - Compare players</h1>
+                          <div class="card-body">
+                            <img src="placas/placas(5).png">
+                            <br>
+                            <p>The following staff functionality is the compare section. Here, as many players as the user wants can be selected from the player list.</p>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-1 player_day">
+                  </div>
+                </div>
+                <div class="row my-4">
+                  <div class="col-12 col-md-6 col-lg-1 mb-4 mb-lg-0 player_day">
+                  </div>
+                  <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-10 player_day">
+                      <div class="card">
+                          <h1 class="card-header">Staff view - Compare players with charts</h1>
+                          <div class="card-body">
+                            <img src="placas/placas(6).png">
+                            <br>
+                            <p>Then, a variable is selected and when submitted, a chart is produced. This chart is dynamic and allows for live edits made possible by our manipulation of the Chart.js library. Without reloading the page the user can create and edit as many charts as they want in order to compare different players with different criteria for a better performance analysis.</p>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-1 player_day">
+                  </div>
+                </div>
+                <div class="row my-4">
+                  <div class="col-12 col-md-6 col-lg-1 mb-4 mb-lg-0 player_day">
+                  </div>
+                  <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-10 player_day">
+                      <div class="card">
+                          <h1 class="card-header" id="about">About us</h1>
+                          <div class="card-body">
+                            <img src="placas/placa(8).png">
+                            <br>
+                            <p>Nowadays most professional team sports use GPS trackers on every player for training sessions and matches. These GPS devices produce an extensive/large amount of data that allow for a detailed performance analysis when properly used.</p>
+
+                            <p>The use of this technology has changed most team disciplines and made them more fast paced and dynamic, changing the focus of the game strategy and even the business that surrounds sports. </p>
+                              
+                            <p>We wanted to take this analysis a step further and try to create a predictive model based on this information and see if it was possible to foresee, predict and eventually prevent player injuries. 
+                              To do so we took as a test case a local professional rugby team who use GPS devices to track their performances. We focused on one specific tournament they recently played which consisted of twelve matches. All the information we used for the project is real, the players and teams, variables and injuries are real, but we changed the names of players and teams for confidentiality reasons.
+                              We decided to work collectively as a group, having the three of us equally participate in the construction of it all, focusing on communication and learning from each other’s technical strengths.</p>
+                              
+                              <p>Ultimately, PlayerTrack was born.</p>
+                              <a href="https://github.com/sfrechou/PlayerTrack">Github repository</a>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-1 player_day">
+                  </div>
+                </div>
+                <div class="row my-4">
+                  <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0 player_day">
+                    <div class="card">
+                      <h1 class="card-header">Cecilia Giudice</h1>
+                      <div class="card-body">
+                        <br>
+                        <p>Linkedin: <a href="https://www.linkedin.com/in/cecilia-giudice-assanelli-4351591a4/">Cecilia Giudice</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-4 player_day">
+                      <div class="card">
+                          <h1 class="card-header">Julián Arbini</h1>
+                          <div class="card-body">
+                            <br>
+                            <p>Linkedin: <a href="https://www.linkedin.com/in/julian-arbini-9ba744b3/">Julian Arbini</a></p>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-4 player_day">
+                    <div class="card">
+                      <h1 class="card-header">Soledad Frechou</h1>
+                      <div class="card-body">
+                        <br>
+                        <p>Linkedin: <a href="https://www.linkedin.com/in/soledad-frechou/">Soledad Frechou</a></p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
             </main>
         </div>

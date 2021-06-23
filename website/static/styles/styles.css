@@ -75,3 +75,15 @@ input[type=button]:hover{
 .yes {
   background-color: #3e4042 !important;
 }
+.card-header {
+  text-align: center;
+}
+.navbar {
+  background-color: none !important;
+}
+.nav-link {
+  color: white !important;
+}
+.nav-link:hover {
+  color: rgb(161,214,255) !important;
+}
